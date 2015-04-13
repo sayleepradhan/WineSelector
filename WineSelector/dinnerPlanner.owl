@@ -1,0 +1,2219 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY p0 "http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl" >
+]>
+
+
+<rdf:RDF xmlns="&p0;#"
+     xml:base="http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl"
+     xmlns:p0="http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl">
+        <rdfs:comment xml:lang="en">An ontology having information on wine and meal courses.</rdfs:comment>
+        <owl:versionIRI rdf:resource="&p0;/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#canPairWith -->
+
+    <owl:ObjectProperty rdf:about="&p0;#canPairWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:range rdf:resource="&p0;#Meal"/>
+        <rdfs:domain rdf:resource="&p0;#Wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#grownInVineyard -->
+
+    <owl:ObjectProperty rdf:about="&p0;#grownInVineyard">
+        <rdfs:range rdf:resource="&p0;#Country"/>
+        <rdfs:domain rdf:resource="&p0;#Wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#hasBody -->
+
+    <owl:ObjectProperty rdf:about="&p0;#hasBody">
+        <rdfs:domain rdf:resource="&p0;#Wine"/>
+        <rdfs:range rdf:resource="&p0;#WineBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#hasColor -->
+
+    <owl:ObjectProperty rdf:about="&p0;#hasColor">
+        <rdfs:domain rdf:resource="&p0;#Wine"/>
+        <rdfs:range rdf:resource="&p0;#WineColor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#hasFlavor -->
+
+    <owl:ObjectProperty rdf:about="&p0;#hasFlavor">
+        <rdfs:domain rdf:resource="&p0;#Wine"/>
+        <rdfs:range rdf:resource="&p0;#WineFlavor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="&p0;#hasRegion">
+        <rdfs:domain rdf:resource="&p0;#Country"/>
+        <rdfs:range rdf:resource="&p0;#Region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#hasSweetness -->
+
+    <owl:ObjectProperty rdf:about="&p0;#hasSweetness">
+        <rdfs:domain rdf:resource="&p0;#Wine"/>
+        <rdfs:range rdf:resource="&p0;#WineSweetness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#hasBottleSize -->
+
+    <owl:DatatypeProperty rdf:about="&p0;#hasBottleSize">
+        <rdfs:domain rdf:resource="&p0;#Wine"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#hasCost -->
+
+    <owl:DatatypeProperty rdf:about="&p0;#hasCost">
+        <rdfs:domain rdf:resource="&p0;#Meal"/>
+        <rdfs:domain rdf:resource="&p0;#Wine"/>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#hasFatPercentage -->
+
+    <owl:DatatypeProperty rdf:about="&p0;#hasFatPercentage">
+        <rdfs:domain rdf:resource="&p0;#Meal"/>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Australia -->
+
+    <owl:Class rdf:about="&p0;#Australia">
+        <rdfs:subClassOf rdf:resource="&p0;#Australia"/>
+        <rdfs:subClassOf rdf:resource="&p0;#Continent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#BeefDish -->
+
+    <owl:Class rdf:about="&p0;#BeefDish">
+        <rdfs:subClassOf rdf:resource="&p0;#Meal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Burger -->
+
+    <owl:Class rdf:about="&p0;#Burger">
+        <rdfs:subClassOf rdf:resource="&p0;#Meal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#CabernetSauvignon -->
+
+    <owl:Class rdf:about="&p0;#CabernetSauvignon">
+        <rdfs:subClassOf rdf:resource="&p0;#RedWine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                <owl:someValuesFrom rdf:resource="&p0;#HighFatMeal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#BeefDish"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#Pizza"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                        <owl:hasValue rdf:resource="&p0;#Full"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                        <owl:hasValue rdf:resource="&p0;#Medium"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Moderate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Strong"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Chardonnay -->
+
+    <owl:Class rdf:about="&p0;#Chardonnay">
+        <rdfs:subClassOf rdf:resource="&p0;#WhiteWine"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                        <owl:hasValue rdf:resource="&p0;#Full"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                        <owl:hasValue rdf:resource="&p0;#Medium"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Moderate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Strong"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&p0;#GrilledDish"/>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&p0;#ChickenDish"/>
+                                    <rdf:Description rdf:about="&p0;#FishDish"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ChickenDish -->
+
+    <owl:Class rdf:about="&p0;#ChickenDish">
+        <rdfs:subClassOf rdf:resource="&p0;#FowlDish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Chile -->
+
+    <owl:Class rdf:about="&p0;#Chile">
+        <rdfs:subClassOf rdf:resource="&p0;#SouthAmerica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ConsumableThing -->
+
+    <owl:Class rdf:about="&p0;#ConsumableThing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Continent -->
+
+    <owl:Class rdf:about="&p0;#Continent">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ContinentalClimateRegion -->
+
+    <owl:Class rdf:about="&p0;#ContinentalClimateRegion">
+        <rdfs:subClassOf rdf:resource="&p0;#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#CoolClimateMerlot -->
+
+    <owl:Class rdf:about="&p0;#CoolClimateMerlot">
+        <rdfs:subClassOf rdf:resource="&p0;#Merlot"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#OffDry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                <owl:hasValue rdf:resource="&p0;#Full"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&p0;#HotClimateMerlot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Country -->
+
+    <owl:Class rdf:about="&p0;#Country">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasRegion"/>
+                <owl:someValuesFrom rdf:resource="&p0;#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#CreamySauceBasedPasta -->
+
+    <owl:Class rdf:about="&p0;#CreamySauceBasedPasta">
+        <rdfs:subClassOf rdf:resource="&p0;#Pasta"/>
+        <owl:disjointWith rdf:resource="&p0;#TomatoSauceBasedPasta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Europe -->
+
+    <owl:Class rdf:about="&p0;#Europe">
+        <rdfs:subClassOf rdf:resource="&p0;#Continent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#FishDish -->
+
+    <owl:Class rdf:about="&p0;#FishDish">
+        <rdfs:subClassOf rdf:resource="&p0;#Meal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#FlatfishDish -->
+
+    <owl:Class rdf:about="&p0;#FlatfishDish">
+        <rdfs:subClassOf rdf:resource="&p0;#FishDish"/>
+        <owl:disjointWith rdf:resource="&p0;#ShellFishDish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#FowlDish -->
+
+    <owl:Class rdf:about="&p0;#FowlDish">
+        <rdfs:subClassOf rdf:resource="&p0;#Meal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#France -->
+
+    <owl:Class rdf:about="&p0;#France">
+        <rdfs:subClassOf rdf:resource="&p0;#Europe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Germany -->
+
+    <owl:Class rdf:about="&p0;#Germany">
+        <rdfs:subClassOf rdf:resource="&p0;#Europe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#GrilledDish -->
+
+    <owl:Class rdf:about="&p0;#GrilledDish">
+        <rdfs:subClassOf rdf:resource="&p0;#Meal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#HighFatMeal -->
+
+    <owl:Class rdf:about="&p0;#HighFatMeal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&p0;#Meal"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFatPercentage"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="&xsd;integer">30</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#HotClimateMerlot -->
+
+    <owl:Class rdf:about="&p0;#HotClimateMerlot">
+        <rdfs:subClassOf rdf:resource="&p0;#Merlot"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                        <owl:hasValue rdf:resource="&p0;#Light"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                        <owl:hasValue rdf:resource="&p0;#Medium"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Italy -->
+
+    <owl:Class rdf:about="&p0;#Italy">
+        <rdfs:subClassOf rdf:resource="&p0;#Europe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#LambDish -->
+
+    <owl:Class rdf:about="&p0;#LambDish">
+        <rdfs:subClassOf rdf:resource="&p0;#GrilledDish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#MaritimeClimateRegion -->
+
+    <owl:Class rdf:about="&p0;#MaritimeClimateRegion">
+        <rdfs:subClassOf rdf:resource="&p0;#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Meal -->
+
+    <owl:Class rdf:about="&p0;#Meal">
+        <rdfs:subClassOf rdf:resource="&p0;#ConsumableThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasFatPercentage"/>
+                <owl:someValuesFrom rdf:resource="&xsd;positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#MediterraneanClimateRegion -->
+
+    <owl:Class rdf:about="&p0;#MediterraneanClimateRegion">
+        <rdfs:subClassOf rdf:resource="&p0;#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Merlot -->
+
+    <owl:Class rdf:about="&p0;#Merlot">
+        <rdfs:subClassOf rdf:resource="&p0;#RedWine"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:someValuesFrom rdf:resource="&p0;#FishDish"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#ChickenDish"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#Pizza"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#TomatoSauceBasedPasta"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:someValuesFrom rdf:resource="&p0;#CreamySauceBasedPasta"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Delicate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Moderate"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#NonSpicyBeefDish -->
+
+    <owl:Class rdf:about="&p0;#NonSpicyBeefDish">
+        <rdfs:subClassOf rdf:resource="&p0;#BeefDish"/>
+        <owl:disjointWith rdf:resource="&p0;#SpicyBeefDish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#NonSpicyChicken -->
+
+    <owl:Class rdf:about="&p0;#NonSpicyChicken">
+        <rdfs:subClassOf rdf:resource="&p0;#ChickenDish"/>
+        <owl:disjointWith rdf:resource="&p0;#SpicyChicken"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#NonSpicyFlatFish -->
+
+    <owl:Class rdf:about="&p0;#NonSpicyFlatFish">
+        <rdfs:subClassOf rdf:resource="&p0;#FlatfishDish"/>
+        <owl:disjointWith rdf:resource="&p0;#SpicyFlatFish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#NonSpicyShellFishDish -->
+
+    <owl:Class rdf:about="&p0;#NonSpicyShellFishDish">
+        <rdfs:subClassOf rdf:resource="&p0;#ShellFishDish"/>
+        <owl:disjointWith rdf:resource="&p0;#SpicyShellFishDish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#NorthAmerica -->
+
+    <owl:Class rdf:about="&p0;#NorthAmerica">
+        <rdfs:subClassOf rdf:resource="&p0;#Continent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Pasta -->
+
+    <owl:Class rdf:about="&p0;#Pasta">
+        <rdfs:subClassOf rdf:resource="&p0;#Meal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#PinotGrigio -->
+
+    <owl:Class rdf:about="&p0;#PinotGrigio">
+        <rdfs:subClassOf rdf:resource="&p0;#WhiteWine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                <owl:hasValue rdf:resource="&p0;#Moderate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                <owl:hasValue rdf:resource="&p0;#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&p0;#NonSpicyFlatFish"/>
+                            <rdf:Description rdf:about="&p0;#NonSpicyShellFishDish"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#PinotNoir -->
+
+    <owl:Class rdf:about="&p0;#PinotNoir">
+        <rdfs:subClassOf rdf:resource="&p0;#RedWine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                <owl:hasValue rdf:resource="&p0;#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                <owl:hasValue rdf:resource="&p0;#Delicate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#CreamySauceBasedPasta"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#FishDish"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#GrilledDish"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Pizza -->
+
+    <owl:Class rdf:about="&p0;#Pizza">
+        <rdfs:subClassOf rdf:resource="&p0;#Meal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Portugal -->
+
+    <owl:Class rdf:about="&p0;#Portugal">
+        <rdfs:subClassOf rdf:resource="&p0;#Europe"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasRegion"/>
+                <owl:onClass rdf:resource="&p0;#MediterraneanClimateRegion"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#RedWine -->
+
+    <owl:Class rdf:about="&p0;#RedWine">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&p0;#Wine"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasColor"/>
+                        <owl:hasValue rdf:resource="&p0;#Red"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Region -->
+
+    <owl:Class rdf:about="&p0;#Region">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Riesling -->
+
+    <owl:Class rdf:about="&p0;#Riesling">
+        <rdfs:subClassOf rdf:resource="&p0;#WhiteWine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                <owl:allValuesFrom rdf:resource="&p0;#FishDish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                <owl:hasValue rdf:resource="&p0;#Strong"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                <owl:hasValue rdf:resource="&p0;#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#RoseWine -->
+
+    <owl:Class rdf:about="&p0;#RoseWine">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&p0;#Wine"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasColor"/>
+                        <owl:hasValue rdf:resource="&p0;#Rose"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Sangiovese -->
+
+    <owl:Class rdf:about="&p0;#Sangiovese">
+        <rdfs:subClassOf rdf:resource="&p0;#RoseWine"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#CreamySauceBasedPasta"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#LambDish"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                <owl:hasValue rdf:resource="&p0;#Delicate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                <owl:hasValue rdf:resource="&p0;#Full"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#SauvignonBlanc -->
+
+    <owl:Class rdf:about="&p0;#SauvignonBlanc">
+        <rdfs:subClassOf rdf:resource="&p0;#WhiteWine"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Delicate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Moderate"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#CreamySauceBasedPasta"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#FishDish"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#GrilledDish"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                <owl:hasValue rdf:resource="&p0;#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ShellFishDish -->
+
+    <owl:Class rdf:about="&p0;#ShellFishDish">
+        <rdfs:subClassOf rdf:resource="&p0;#FishDish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#SouthAmerica -->
+
+    <owl:Class rdf:about="&p0;#SouthAmerica">
+        <rdfs:subClassOf rdf:resource="&p0;#Continent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Spain -->
+
+    <owl:Class rdf:about="&p0;#Spain">
+        <rdfs:subClassOf rdf:resource="&p0;#Europe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#SpicyBeefDish -->
+
+    <owl:Class rdf:about="&p0;#SpicyBeefDish">
+        <rdfs:subClassOf rdf:resource="&p0;#BeefDish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#SpicyChicken -->
+
+    <owl:Class rdf:about="&p0;#SpicyChicken">
+        <rdfs:subClassOf rdf:resource="&p0;#ChickenDish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#SpicyFlatFish -->
+
+    <owl:Class rdf:about="&p0;#SpicyFlatFish">
+        <rdfs:subClassOf rdf:resource="&p0;#FlatfishDish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#SpicyShellFishDish -->
+
+    <owl:Class rdf:about="&p0;#SpicyShellFishDish">
+        <rdfs:subClassOf rdf:resource="&p0;#ShellFishDish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Syrah -->
+
+    <owl:Class rdf:about="&p0;#Syrah">
+        <rdfs:subClassOf rdf:resource="&p0;#RedWine"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Moderate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Strong"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                        <owl:hasValue rdf:resource="&p0;#Full"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                        <owl:hasValue rdf:resource="&p0;#Medium"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#GrilledDish"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#LambDish"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Tempranillo -->
+
+    <owl:Class rdf:about="&p0;#Tempranillo">
+        <rdfs:subClassOf rdf:resource="&p0;#RoseWine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                <owl:hasValue rdf:resource="&p0;#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#Pizza"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                        <owl:allValuesFrom rdf:resource="&p0;#TomatoSauceBasedPasta"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                <owl:hasValue rdf:resource="&p0;#Moderate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#TomatoSauceBasedPasta -->
+
+    <owl:Class rdf:about="&p0;#TomatoSauceBasedPasta">
+        <rdfs:subClassOf rdf:resource="&p0;#Pasta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#USA -->
+
+    <owl:Class rdf:about="&p0;#USA">
+        <rdfs:subClassOf rdf:resource="&p0;#NorthAmerica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#WhiteWine -->
+
+    <owl:Class rdf:about="&p0;#WhiteWine">
+        <rdfs:subClassOf rdf:resource="&p0;#Wine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasColor"/>
+                <owl:hasValue rdf:resource="&p0;#White"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#WhiteZinfandel -->
+
+    <owl:Class rdf:about="&p0;#WhiteZinfandel">
+        <rdfs:subClassOf rdf:resource="&p0;#RoseWine"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                <owl:hasValue rdf:resource="&p0;#Delicate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                <owl:hasValue rdf:resource="&p0;#Full"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&p0;#GrilledDish"/>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&p0;#BeefDish"/>
+                                    <rdf:Description rdf:about="&p0;#LambDish"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Wine -->
+
+    <owl:Class rdf:about="&p0;#Wine">
+        <rdfs:subClassOf rdf:resource="&p0;#ConsumableThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasCost"/>
+                <owl:someValuesFrom rdf:resource="&xsd;positiveInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasBottleSize"/>
+                <owl:someValuesFrom rdf:resource="&xsd;decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                <owl:someValuesFrom rdf:resource="&p0;#WineFlavor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="&p0;#WineSweetness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasColor"/>
+                <owl:someValuesFrom rdf:resource="&p0;#WineColor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#WineAttributes -->
+
+    <owl:Class rdf:about="&p0;#WineAttributes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#WineBody -->
+
+    <owl:Class rdf:about="&p0;#WineBody">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&p0;#Light"/>
+                    <rdf:Description rdf:about="&p0;#Medium"/>
+                    <rdf:Description rdf:about="&p0;#Full"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&p0;#WineTaste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#WineColor -->
+
+    <owl:Class rdf:about="&p0;#WineColor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&p0;#Rose"/>
+                    <rdf:Description rdf:about="&p0;#White"/>
+                    <rdf:Description rdf:about="&p0;#Red"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&p0;#WineAttributes"/>
+        <owl:disjointWith rdf:resource="&p0;#WineTaste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#WineFlavor -->
+
+    <owl:Class rdf:about="&p0;#WineFlavor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&p0;#Moderate"/>
+                    <rdf:Description rdf:about="&p0;#Delicate"/>
+                    <rdf:Description rdf:about="&p0;#Strong"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&p0;#WineTaste"/>
+        <owl:disjointWith rdf:resource="&p0;#WineSweetness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#WineSweetness -->
+
+    <owl:Class rdf:about="&p0;#WineSweetness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&p0;#Dry"/>
+                    <rdf:Description rdf:about="&p0;#Sweet"/>
+                    <rdf:Description rdf:about="&p0;#OffDry"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&p0;#WineTaste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#WineTaste -->
+
+    <owl:Class rdf:about="&p0;#WineTaste">
+        <rdfs:subClassOf rdf:resource="&p0;#WineAttributes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Zinfandel -->
+
+    <owl:Class rdf:about="&p0;#Zinfandel">
+        <rdfs:subClassOf rdf:resource="&p0;#RedWine"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                        <owl:hasValue rdf:resource="&p0;#Full"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasBody"/>
+                        <owl:hasValue rdf:resource="&p0;#Medium"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#hasSweetness"/>
+                <owl:hasValue rdf:resource="&p0;#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&p0;#canPairWith"/>
+                <owl:allValuesFrom rdf:resource="&p0;#GrilledDish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Moderate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&p0;#hasFlavor"/>
+                        <owl:hasValue rdf:resource="&p0;#Strong"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Bordeaux -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Bordeaux">
+        <rdf:type rdf:resource="&p0;#France"/>
+        <hasRegion rdf:resource="&p0;#MaritimeRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Burgundy -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Burgundy">
+        <rdf:type rdf:resource="&p0;#France"/>
+        <hasRegion rdf:resource="&p0;#ContinentalRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#California -->
+
+    <owl:NamedIndividual rdf:about="&p0;#California">
+        <rdf:type rdf:resource="&p0;#USA"/>
+        <hasRegion rdf:resource="&p0;#MediterraneanRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Catalonia -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Catalonia">
+        <rdf:type rdf:resource="&p0;#Spain"/>
+        <hasRegion rdf:resource="&p0;#ContinentalRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ChickenFriedRiceInSchezuanSauca -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ChickenFriedRiceInSchezuanSauca">
+        <rdf:type rdf:resource="&p0;#SpicyChicken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ChileCentralValley -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ChileCentralValley">
+        <rdf:type rdf:resource="&p0;#Chile"/>
+        <hasRegion rdf:resource="&p0;#MediterraneanRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ContinentalRegion -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ContinentalRegion">
+        <rdf:type rdf:resource="&p0;#ContinentalClimateRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#CountryGermany -->
+
+    <owl:NamedIndividual rdf:about="&p0;#CountryGermany">
+        <rdf:type rdf:resource="&p0;#Germany"/>
+        <hasRegion rdf:resource="&p0;#ContinentalRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#CountryPortugal -->
+
+    <owl:NamedIndividual rdf:about="&p0;#CountryPortugal">
+        <rdf:type rdf:resource="&p0;#Portugal"/>
+        <hasRegion rdf:resource="&p0;#MediterraneanRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Delicate -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Delicate">
+        <rdf:type rdf:resource="&p0;#WineFlavor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Dry -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Dry">
+        <rdf:type rdf:resource="&p0;#WineSweetness"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex1Chardonnay -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex1Chardonnay">
+        <rdf:type rdf:resource="&p0;#Chardonnay"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.75</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">25</hasCost>
+        <grownInVineyard rdf:resource="&p0;#California"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex1PinotGrigio -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex1PinotGrigio">
+        <rdf:type rdf:resource="&p0;#PinotGrigio"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.375</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">11</hasCost>
+        <grownInVineyard rdf:resource="&p0;#ChileCentralValley"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex1Riesling -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex1Riesling">
+        <rdf:type rdf:resource="&p0;#Riesling"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.5</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">13</hasCost>
+        <grownInVineyard rdf:resource="&p0;#California"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex1Sangiovese -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex1Sangiovese">
+        <rdf:type rdf:resource="&p0;#Sangiovese"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.75</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">21</hasCost>
+        <hasBody rdf:resource="&p0;#Full"/>
+        <grownInVineyard rdf:resource="&p0;#WesternAustralia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex1SauvignonBlanc -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex1SauvignonBlanc">
+        <rdf:type rdf:resource="&p0;#SauvignonBlanc"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.8</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">12</hasCost>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#SouthernChile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex1Syrah -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex1Syrah">
+        <rdf:type rdf:resource="&p0;#Syrah"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.7</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">14</hasCost>
+        <hasBody rdf:resource="&p0;#Full"/>
+        <grownInVineyard rdf:resource="&p0;#SouthernAustralia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex1Tempranillo -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex1Tempranillo">
+        <rdf:type rdf:resource="&p0;#Tempranillo"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.375</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">12</hasCost>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#Sicily"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex1WhiteZinfandel -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex1WhiteZinfandel">
+        <rdf:type rdf:resource="&p0;#WhiteZinfandel"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.5</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">7</hasCost>
+        <hasBody rdf:resource="&p0;#Full"/>
+        <grownInVineyard rdf:resource="&p0;#RhoneValley"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex1Zinfandel -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex1Zinfandel">
+        <rdf:type rdf:resource="&p0;#Zinfandel"/>
+        <hasCost rdf:datatype="&xsd;positiveInteger">19</hasCost>
+        <hasBottleSize rdf:datatype="&xsd;decimal">4.25</hasBottleSize>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#Tuscany"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2CabernetSauvignon -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2CabernetSauvignon">
+        <rdf:type rdf:resource="&p0;#CabernetSauvignon"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.75</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">45</hasCost>
+        <hasBody rdf:resource="&p0;#Full"/>
+        <grownInVineyard rdf:resource="&p0;#WesternAustralia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2Chardonnay -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2Chardonnay">
+        <rdf:type rdf:resource="&p0;#Chardonnay"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">3.0</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">65</hasCost>
+        <grownInVineyard rdf:resource="&p0;#Burgundy"/>
+        <hasBody rdf:resource="&p0;#Full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2Merlot -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2Merlot">
+        <rdf:type rdf:resource="&p0;#Merlot"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.25</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">10</hasCost>
+        <grownInVineyard rdf:resource="&p0;#California"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2PinotGrigio -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2PinotGrigio">
+        <rdf:type rdf:resource="&p0;#PinotGrigio"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.0</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">26</hasCost>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#SouthernAustralia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2PinotNoir -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2PinotNoir">
+        <rdf:type rdf:resource="&p0;#PinotNoir"/>
+        <hasCost rdf:datatype="&xsd;positiveInteger">200</hasCost>
+        <hasBottleSize rdf:datatype="&xsd;decimal">3.5</hasBottleSize>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#WilliametteValley"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2Riesling -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2Riesling">
+        <rdf:type rdf:resource="&p0;#Riesling"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.25</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">48</hasCost>
+        <grownInVineyard rdf:resource="&p0;#CountryGermany"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2Sangiovese -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2Sangiovese">
+        <rdf:type rdf:resource="&p0;#Sangiovese"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">3.0</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">65</hasCost>
+        <hasBody rdf:resource="&p0;#Full"/>
+        <grownInVineyard rdf:resource="&p0;#Sicily"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2SauvignonBlanc -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2SauvignonBlanc">
+        <rdf:type rdf:resource="&p0;#SauvignonBlanc"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">2.5</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">40</hasCost>
+        <grownInVineyard rdf:resource="&p0;#California"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2Syrah -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2Syrah">
+        <rdf:type rdf:resource="&p0;#Syrah"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.9</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">21</hasCost>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#SouthernChile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2Tempranillo -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2Tempranillo">
+        <rdf:type rdf:resource="&p0;#Tempranillo"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">2</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">33</hasCost>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#NapaValley"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2WhiteZinfandel -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2WhiteZinfandel">
+        <rdf:type rdf:resource="&p0;#WhiteZinfandel"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.75</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">13</hasCost>
+        <grownInVineyard rdf:resource="&p0;#Catalonia"/>
+        <hasBody rdf:resource="&p0;#Full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex2Zinfandel -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex2Zinfandel">
+        <rdf:type rdf:resource="&p0;#Zinfandel"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">2.75</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">40</hasCost>
+        <grownInVineyard rdf:resource="&p0;#California"/>
+        <hasBody rdf:resource="&p0;#Full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex3CabernetSauvignon -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex3CabernetSauvignon">
+        <rdf:type rdf:resource="&p0;#CabernetSauvignon"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">3.0</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">400</hasCost>
+        <grownInVineyard rdf:resource="&p0;#ChileCentralValley"/>
+        <hasBody rdf:resource="&p0;#Full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex3Merlot -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex3Merlot">
+        <rdf:type rdf:resource="&p0;#Merlot"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.0</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">18</hasCost>
+        <grownInVineyard rdf:resource="&p0;#Catalonia"/>
+        <hasBody rdf:resource="&p0;#Light"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex4CabernetSauvignon -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex4CabernetSauvignon">
+        <rdf:type rdf:resource="&p0;#CabernetSauvignon"/>
+        <hasCost rdf:datatype="&xsd;positiveInteger">250</hasCost>
+        <hasBottleSize rdf:datatype="&xsd;decimal">4.5</hasBottleSize>
+        <grownInVineyard rdf:resource="&p0;#California"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Ex4Merlot -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Ex4Merlot">
+        <rdf:type rdf:resource="&p0;#Merlot"/>
+        <hasCost rdf:datatype="&xsd;positiveInteger">15</hasCost>
+        <hasBottleSize rdf:datatype="&xsd;decimal">3.25</hasBottleSize>
+        <grownInVineyard rdf:resource="&p0;#Bordeaux"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExPinotNoir -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExPinotNoir">
+        <rdf:type rdf:resource="&p0;#PinotNoir"/>
+        <hasCost rdf:datatype="&xsd;positiveInteger">20</hasCost>
+        <hasBottleSize rdf:datatype="&xsd;decimal">5</hasBottleSize>
+        <grownInVineyard rdf:resource="&p0;#Burgundy"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExampleCabernetSauvignon -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExampleCabernetSauvignon">
+        <rdf:type rdf:resource="&p0;#CabernetSauvignon"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.5</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">48</hasCost>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#NapaValley"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExampleChardonnay -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExampleChardonnay">
+        <rdf:type rdf:resource="&p0;#Chardonnay"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.5</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">28</hasCost>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#NapaValley"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExampleMerlot -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExampleMerlot">
+        <rdf:type rdf:resource="&p0;#Merlot"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.5</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">12</hasCost>
+        <hasBody rdf:resource="&p0;#Light"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExamplePinotGrigio -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExamplePinotGrigio">
+        <rdf:type rdf:resource="&p0;#PinotGrigio"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.75</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">15</hasCost>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#WilliametteValley"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExamplePinotNoir -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExamplePinotNoir">
+        <rdf:type rdf:resource="&p0;#PinotNoir"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.75</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">25</hasCost>
+        <grownInVineyard rdf:resource="&p0;#CountryGermany"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExampleRiesling -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExampleRiesling">
+        <rdf:type rdf:resource="&p0;#Riesling"/>
+        <hasCost rdf:datatype="&xsd;positiveInteger">14</hasCost>
+        <hasBottleSize rdf:datatype="&xsd;decimal">2.0</hasBottleSize>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#WesternAustralia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExampleSangiovese -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExampleSangiovese">
+        <rdf:type rdf:resource="&p0;#Sangiovese"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.5</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">23</hasCost>
+        <grownInVineyard rdf:resource="&p0;#California"/>
+        <hasBody rdf:resource="&p0;#Full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExampleSauvignonBlanc -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExampleSauvignonBlanc">
+        <rdf:type rdf:resource="&p0;#SauvignonBlanc"/>
+        <hasCost rdf:datatype="&xsd;positiveInteger">19</hasCost>
+        <hasBottleSize rdf:datatype="&xsd;decimal">2.25</hasBottleSize>
+        <grownInVineyard rdf:resource="&p0;#Bordeaux"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExampleSyrah -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExampleSyrah">
+        <rdf:type rdf:resource="&p0;#Syrah"/>
+        <hasCost rdf:datatype="&xsd;positiveInteger">18</hasCost>
+        <hasBottleSize rdf:datatype="&xsd;decimal">3.75</hasBottleSize>
+        <hasBody rdf:resource="&p0;#Full"/>
+        <grownInVineyard rdf:resource="&p0;#RhoneValley"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExampleTempranillo -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExampleTempranillo">
+        <rdf:type rdf:resource="&p0;#Tempranillo"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">1.25</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">17</hasCost>
+        <hasBody rdf:resource="&p0;#Medium"/>
+        <grownInVineyard rdf:resource="&p0;#SouthernChile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExampleWhiteZinfandel -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExampleWhiteZinfandel">
+        <rdf:type rdf:resource="&p0;#WhiteZinfandel"/>
+        <hasCost rdf:datatype="&xsd;positiveInteger">10</hasCost>
+        <hasBottleSize rdf:datatype="&xsd;decimal">2.5</hasBottleSize>
+        <grownInVineyard rdf:resource="&p0;#CountryGermany"/>
+        <hasBody rdf:resource="&p0;#Full"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ExampleZinfandel -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ExampleZinfandel">
+        <rdf:type rdf:resource="&p0;#Zinfandel"/>
+        <hasBottleSize rdf:datatype="&xsd;decimal">0.375</hasBottleSize>
+        <hasCost rdf:datatype="&xsd;positiveInteger">28</hasCost>
+        <grownInVineyard rdf:resource="&p0;#Burgundy"/>
+        <hasBody rdf:resource="&p0;#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Full -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Full">
+        <rdf:type rdf:resource="&p0;#WineBody"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#GrilledChicken -->
+
+    <owl:NamedIndividual rdf:about="&p0;#GrilledChicken">
+        <rdf:type rdf:resource="&p0;#GrilledDish"/>
+        <rdf:type rdf:resource="&p0;#NonSpicyChicken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#GrilledEggplant -->
+
+    <owl:NamedIndividual rdf:about="&p0;#GrilledEggplant">
+        <rdf:type rdf:resource="&p0;#GrilledDish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#GrilledLamb -->
+
+    <owl:NamedIndividual rdf:about="&p0;#GrilledLamb">
+        <rdf:type rdf:resource="&p0;#GrilledDish"/>
+        <rdf:type rdf:resource="&p0;#LambDish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#GrilledSalmonWithPesto -->
+
+    <owl:NamedIndividual rdf:about="&p0;#GrilledSalmonWithPesto">
+        <rdf:type rdf:resource="&p0;#GrilledDish"/>
+        <rdf:type rdf:resource="&p0;#NonSpicyFlatFish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#GruyereBurger -->
+
+    <owl:NamedIndividual rdf:about="&p0;#GruyereBurger">
+        <rdf:type rdf:resource="&p0;#BeefDish"/>
+        <rdf:type rdf:resource="&p0;#Burger"/>
+        <hasFatPercentage rdf:datatype="&xsd;integer">45</hasFatPercentage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#LambCopsWithVinaigrette -->
+
+    <owl:NamedIndividual rdf:about="&p0;#LambCopsWithVinaigrette">
+        <rdf:type rdf:resource="&p0;#LambDish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#LambShawarma -->
+
+    <owl:NamedIndividual rdf:about="&p0;#LambShawarma">
+        <rdf:type rdf:resource="&p0;#LambDish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Light -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Light">
+        <rdf:type rdf:resource="&p0;#WineBody"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#MaritimeRegion -->
+
+    <owl:NamedIndividual rdf:about="&p0;#MaritimeRegion">
+        <rdf:type rdf:resource="&p0;#MaritimeClimateRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#MediterraneanRegion -->
+
+    <owl:NamedIndividual rdf:about="&p0;#MediterraneanRegion">
+        <rdf:type rdf:resource="&p0;#MediterraneanClimateRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Medium -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Medium">
+        <rdf:type rdf:resource="&p0;#WineBody"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Moderate -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Moderate">
+        <rdf:type rdf:resource="&p0;#WineFlavor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#MushroomPizzaWithTomatoSauce -->
+
+    <owl:NamedIndividual rdf:about="&p0;#MushroomPizzaWithTomatoSauce">
+        <rdf:type rdf:resource="&p0;#Pizza"/>
+        <hasFatPercentage rdf:datatype="&xsd;integer">38</hasFatPercentage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#NapaValley -->
+
+    <owl:NamedIndividual rdf:about="&p0;#NapaValley">
+        <rdf:type rdf:resource="&p0;#USA"/>
+        <hasRegion rdf:resource="&p0;#MediterraneanRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#OffDry -->
+
+    <owl:NamedIndividual rdf:about="&p0;#OffDry">
+        <rdf:type rdf:resource="&p0;#WineSweetness"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#PeaRavioliWithLobster -->
+
+    <owl:NamedIndividual rdf:about="&p0;#PeaRavioliWithLobster">
+        <rdf:type rdf:resource="&p0;#CreamySauceBasedPasta"/>
+        <rdf:type rdf:resource="&p0;#NonSpicyShellFishDish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#PenneArabiata -->
+
+    <owl:NamedIndividual rdf:about="&p0;#PenneArabiata">
+        <rdf:type rdf:resource="&p0;#TomatoSauceBasedPasta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Red -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Red">
+        <rdf:type rdf:resource="&p0;#WineColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#RhoneValley -->
+
+    <owl:NamedIndividual rdf:about="&p0;#RhoneValley">
+        <rdf:type rdf:resource="&p0;#France"/>
+        <hasRegion rdf:resource="&p0;#MediterraneanRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Rose -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Rose">
+        <rdf:type rdf:resource="&p0;#WineColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Sicily -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Sicily">
+        <rdf:type rdf:resource="&p0;#Italy"/>
+        <hasRegion rdf:resource="&p0;#MediterraneanRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#SouthernAustralia -->
+
+    <owl:NamedIndividual rdf:about="&p0;#SouthernAustralia">
+        <rdf:type rdf:resource="&p0;#Australia"/>
+        <hasRegion rdf:resource="&p0;#MediterraneanRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#SouthernChile -->
+
+    <owl:NamedIndividual rdf:about="&p0;#SouthernChile">
+        <rdf:type rdf:resource="&p0;#Chile"/>
+        <hasRegion rdf:resource="&p0;#MaritimeRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Strong -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Strong">
+        <rdf:type rdf:resource="&p0;#WineFlavor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Sweet -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Sweet">
+        <rdf:type rdf:resource="&p0;#WineSweetness"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#TexasHighPlains -->
+
+    <owl:NamedIndividual rdf:about="&p0;#TexasHighPlains">
+        <rdf:type rdf:resource="&p0;#USA"/>
+        <hasRegion rdf:resource="&p0;#ContinentalRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#ThreeCheeseBakedPasta -->
+
+    <owl:NamedIndividual rdf:about="&p0;#ThreeCheeseBakedPasta">
+        <rdf:type rdf:resource="&p0;#CreamySauceBasedPasta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#Tuscany -->
+
+    <owl:NamedIndividual rdf:about="&p0;#Tuscany">
+        <rdf:type rdf:resource="&p0;#Italy"/>
+        <hasRegion rdf:resource="&p0;#MediterraneanRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#WesternAustralia -->
+
+    <owl:NamedIndividual rdf:about="&p0;#WesternAustralia">
+        <rdf:type rdf:resource="&p0;#Australia"/>
+        <hasRegion rdf:resource="&p0;#MediterraneanRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#White -->
+
+    <owl:NamedIndividual rdf:about="&p0;#White">
+        <rdf:type rdf:resource="&p0;#WineColor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saylee/ontologies/2014/10/dinnerPlanner.owl#WilliametteValley -->
+
+    <owl:NamedIndividual rdf:about="&p0;#WilliametteValley">
+        <rdf:type rdf:resource="&p0;#USA"/>
+        <hasRegion rdf:resource="&p0;#MaritimeRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&p0;#CabernetSauvignon"/>
+            <rdf:Description rdf:about="&p0;#Merlot"/>
+            <rdf:Description rdf:about="&p0;#PinotNoir"/>
+            <rdf:Description rdf:about="&p0;#Syrah"/>
+            <rdf:Description rdf:about="&p0;#Zinfandel"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&p0;#France"/>
+            <rdf:Description rdf:about="&p0;#Germany"/>
+            <rdf:Description rdf:about="&p0;#Italy"/>
+            <rdf:Description rdf:about="&p0;#Portugal"/>
+            <rdf:Description rdf:about="&p0;#Spain"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&p0;#Sangiovese"/>
+            <rdf:Description rdf:about="&p0;#Tempranillo"/>
+            <rdf:Description rdf:about="&p0;#WhiteZinfandel"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&p0;#RedWine"/>
+            <rdf:Description rdf:about="&p0;#RoseWine"/>
+            <rdf:Description rdf:about="&p0;#WhiteWine"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&p0;#Burger"/>
+            <rdf:Description rdf:about="&p0;#Pasta"/>
+            <rdf:Description rdf:about="&p0;#Pizza"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&p0;#Chardonnay"/>
+            <rdf:Description rdf:about="&p0;#PinotGrigio"/>
+            <rdf:Description rdf:about="&p0;#Riesling"/>
+            <rdf:Description rdf:about="&p0;#SauvignonBlanc"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

@@ -162,7 +162,7 @@ class WineDetails {
 
 class WineSelector {
 	
-	String fileName ="C:/Users/Saylee/Documents/Sem1/AI/FinalProject/OWLfiles/dinnerPlanner.owl";
+	String fileName ="dinnerPlanner.owl";
 	OntModel model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
 	WineDetails winedtl = new WineDetails();
 	
